@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>MySQL Database</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Create Database and Table</h1>
+  <form action="/createSQLdb" method="POST">
+    <button type="submit">Initialize Database</button>
+  </form>
+  <br>
+  <form action="/addEntrySQLdb" method="POST">
+    City:
+    <input type="text" name="city" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Filter</h2>
+  <form action="/printSQLdb" method="POST">
+    City:
+    <input type="text" name="city">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Update Database (Latest Entry Only)</h2>
+  <form action="/updateSQLDatabase" method="POST">
+    City:
+    <input type="text" name="city" required>
+    New Temperature:
+    <input type="number" name="newTemp" required>
+    <button type="submit">Update</button>
+  </form>
+
+  <h2>Delete By Location</h2>
+  <form action="/deleteByLocationSQLdb" method="POST">
+    City:
+    <input type="text" name="city" required>
+    <button type="submit">Delete</button>
+  </form>
+
+  <h2>Delete Database and Table</h2>
+  <form action="/deleteSQLDatabase" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <br>
+  <a href="/">HOME</a>
+</body>
+
+</html>
